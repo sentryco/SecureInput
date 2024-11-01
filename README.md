@@ -1,3 +1,5 @@
+[![Tests](https://github.com/sentryco/SecureInput/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/SecureInput/actions/workflows/Tests.yml)
+
 # SecureInput
 
 > Secure input UI (macOS / iOS)
