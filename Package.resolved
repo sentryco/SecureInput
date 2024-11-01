@@ -1,0 +1,50 @@
+{
+  "pins" : [
+    {
+      "identity" : "filesugar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonist/FileSugar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "c2b801b6afa82283e11ba4e534d21f0e472e89c8"
+      }
+    },
+    {
+      "identity" : "hybridcolor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/HybridColor",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6592be98979ff0201e94f0b7a29e98f3c292715b"
+      }
+    },
+    {
+      "identity" : "jsonsugar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/eonist/JSONSugar.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "de543ae05fe2c18a6d0a3bca1d24656703ced9cd"
+      }
+    },
+    {
+      "identity" : "mockgen",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/MockGen",
+      "state" : {
+        "branch" : "main",
+        "revision" : "79a6766439c3628ee4d134c6e32332538e6baafb"
+      }
+    },
+    {
+      "identity" : "textcolorizer",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/TextColorizer",
+      "state" : {
+        "branch" : "main",
+        "revision" : "57862f7508bb14035762e3f945681efaacbccb09"
+      }
+    }
+  ],
+  "version" : 2
+}

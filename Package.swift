@@ -1,23 +1,32 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
     name: "SecureInput",
+    platforms: [
+      .macOS(.v14),
+      .iOS(.v17)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SecureInput",
             targets: ["SecureInput"]),
     ],
+    dependencies: [
+      .package(url: "https://github.com/sentryco/HybridColor", branch: "main"),
+      .package(url: "https://github.com/sentryco/MockGen", branch: "main"),
+      .package(url: "https://github.com/sentryco/TextColorizer", branch: "main"),
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "SecureInput"),
-        .testTarget(
-            name: "SecureInputTests",
-            dependencies: ["SecureInput"]),
+      .target(
+         name: "SecureInput",
+         dependencies: [
+            .product(name: "HybridColor", package: "HybridColor"),
+            .product(name: "MockGen", package: "MockGen"),
+            .product(name: "TextColorizer", package: "TextColorizer"),
+         ]),
+      .testTarget(
+         name: "SecureInputTests",
+         dependencies: ["SecureInput"])
     ]
 )
