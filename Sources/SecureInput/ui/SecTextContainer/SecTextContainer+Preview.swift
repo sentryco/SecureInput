@@ -3,7 +3,12 @@ import MockGen
 import TextColorizer
 /**
  * Preview
- * - Description: This is a preview of the SecTextContainer SwiftUI view. It generates a random password string and displays it in a SecTextContainer. The password can be toggled between plain text and obscured text.
+ * - Description: This is a preview of the 
+ *               SecTextContainer SwiftUI view. It 
+ *               generates a random password string 
+ *               and displays it in a SecTextContainer. 
+ *               The password can be toggled between 
+ *               plain text and obscured text.
  */
 #Preview(traits: .fixedLayout(width: 400, height: 300)) {
    struct ContentView: View {

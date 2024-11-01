@@ -2,7 +2,12 @@ import SwiftUI
 import MockGen
 /**
  * Preview
- * - Description: This section provides a preview of the `SecTextView` component. It demonstrates the component's functionality and appearance in a controlled environment, which is useful for development and testing purposes.
+ * - Description: This section provides a preview of the 
+ *               `SecTextView` component. It demonstrates 
+ *               the component's functionality and 
+ *               appearance in a controlled environment, 
+ *               which is useful for development and 
+ *               testing purposes.
  */
 #Preview(traits: .fixedLayout(width: 400, height: 300)) {
    /**

@@ -5,7 +5,9 @@ import SwiftUI
 extension SecureInputView {
    /**
     * Overlapping textfields that we toggle between
-    * - Description: A ZStack that layers two text fields, one secure and one not, which can be toggled to show or hide the password.
+    * - Description: A ZStack that layers two text fields, 
+    *               one secure and one not, which can be 
+    *               toggled to show or hide the password.
     */
    internal var textFieldsStack: some View {
       ZStack {
@@ -16,7 +18,14 @@ extension SecureInputView {
    }
    /**
     * Toggle button
-    * - Description: A button that toggles the visibility of the password. When the password is obscured, the button shows an 'eye' icon, indicating that clicking it will reveal the password. Conversely, when the password is visible, the button shows an 'eye.slash' icon, indicating that clicking it will obscure the password.
+    * - Description: A button that toggles the visibility 
+    *               of the password. When the password is 
+    *               obscured, the button shows an 'eye' icon, 
+    *               indicating that clicking it will reveal 
+    *               the password. Conversely, when the 
+    *               password is visible, the button shows an 
+    *               'eye.slash' icon, indicating that 
+    *               clicking it will obscure the password.
     * - Note: alt icons: "lock.fill" : "lock.open"
     * - Fixme: ⚠️️ use consts for the icons
     * - Fixme: ⚠️️ should we use an iconImageModifier here? see other similar code in the code-base?
@@ -42,7 +51,11 @@ extension SecureInputView {
 extension SecureInputView {
    /**
     * Secure textfield
-    * - Description: A secure text field for password input that obscures the characters entered by the user. It uses a placeholder text when the field is empty and provides a visual cue to the user that the input is secure.
+    * - Description: A secure text field for password input 
+    *               that obscures the characters entered by 
+    *               the user. It uses a placeholder text when 
+    *               the field is empty and provides a visual 
+    *               cue to the user that the input is secure.
     * - Note: The prompt is the placeholder text
     * - Note: sometimes  .textContentType(.password) prompts autofill for some reason
     */
@@ -60,7 +73,12 @@ extension SecureInputView {
    }
    /**
     * Textfield
-    * - Description: A non-secure text field for password input that allows the characters entered by the user to be visible. It uses a placeholder text when the field is empty and provides a visual cue to the user that the input is not obscured.
+    * - Description: A non-secure text field for password 
+    *               input that allows the characters 
+    *               entered by the user to be visible. It 
+    *               uses a placeholder text when the field 
+    *               is empty and provides a visual cue to 
+    *               the user that the input is not obscured.
     * - Note: the prompt is the placeholder text
     * - Note: ⚠️️ sometimes  .textContentType(.password) prompts autofill for some reason
     */

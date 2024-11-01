@@ -2,7 +2,12 @@ import SwiftUI
 import MockGen
 /**
  * - Fixme: ⚠️️ Add debugview + state var
- * - Description: Provides a SwiftUI preview of the `SecuredTextFieldView` with a randomly generated password. It showcases the secured text field's appearance and behavior in a controlled environment for testing and debugging purposes.
+ * - Description: Provides a SwiftUI preview of the 
+ *               `SecuredTextFieldView` with a randomly 
+ *               generated password. It showcases the 
+ *               secured text field's appearance and 
+ *               behavior in a controlled environment for 
+ *               testing and debugging purposes.
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {
    struct DebugView: View {

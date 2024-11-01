@@ -3,8 +3,13 @@ import HybridColor
 import MockGen
 /**
  * Preview (Dark / Light mode)
- * - Description: Provides a SwiftUI preview of the `TextFieldView` in both dark and light mode, showcasing the appearance and behavior of the text field with a randomly generated password as placeholder text.
- *  - Fixme: ⚠️️ add debugcontainer + state var to test binding etc 👈
+ * - Description: Provides a SwiftUI preview of the 
+ *               `TextFieldView` in both dark and light 
+ *               mode, showcasing the appearance and 
+ *               behavior of the text field with a 
+ *               randomly generated password as placeholder 
+ *               text.
+ * - Fixme: ⚠️️ add debugcontainer + state var to test binding etc 👈
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {
    PreviewContainer {

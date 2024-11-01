@@ -2,8 +2,13 @@
 import SwiftUI
 /**
  * Used to preview "light-mode" and "dark-mode" simultaniously
- * - Description: A container view that allows the simultaneous preview of content in both light and dark modes for SwiftUI views. This is particularly useful for designers and developers to visualize how UI components will look in different color schemes during the development phase.
- * - Note: We might also test multiple devices at the same time: https://www.hackingwithswift.com/quick-start/swiftui/how-to-preview-your-layout-in-different-devices
+ * - Description: A container view that allows the simultaneous preview 
+ *               of content in both light and dark modes for SwiftUI 
+ *               views. This is particularly useful for designers and 
+ *               developers to visualize how UI components will look in 
+ *               different color schemes during the development phase.
+ * - Note: We might also test multiple devices at the same time: 
+ *         https://www.hackingwithswift.com/quick-start/swiftui/how-to-preview-your-layout-in-different-devices
  * - Important: ⚠️️ This is used by alot of code. Careful when tweaking things
  * - Example: To use `PreviewContainer` to preview a `Text` view in both light and dark modes, you can write:
  *   ```swift
@@ -17,24 +22,24 @@ import SwiftUI
  * - Fixme: ⚠️️ Split into multiple files?
  * - Fixme: ⚠️️ Potentially make it opensource? 👈
  */
-public struct PreviewContainer<Content: View>: View {
+internal struct PreviewContainer<Content: View>: View {
    /**
     * The content view to be previewed in both light and dark modes.
     * - Description: This property holds the view that will be rendered in both light and dark modes for preview purposes.
     */
-   public let content: Content
+   internal let content: Content
    /**
     * A closure that returns the content view to be previewed.
     * - Description: This closure is used to initialize the content that will be displayed in the preview container. It allows for dynamic content creation using a closure that returns a `View`.
     * - Returns: The content view to be previewed.
     */
-   public typealias ContentAlias = () -> Content
+   internal typealias ContentAlias = () -> Content
    /**
     * init
     * - Description: Initializes a new instance of the PreviewContainer with the provided content. The content is specified through a closure that returns a `View`, allowing for dynamic content generation.
     * - Parameter content: The content view to be previewed.
     */
-   public init(@ViewBuilder content: ContentAlias) {
+   internal init(@ViewBuilder content: ContentAlias) {
       self.content = content() // - Fixme: ⚠️️ Maybe delay this until needed?
    }
    /**
@@ -42,7 +47,7 @@ public struct PreviewContainer<Content: View>: View {
     * - Description: The body of the PreviewContainer view. It uses a ZStack to layer the content views in light and dark modes for simultaneous previewing. This setup is essential for visualizing the appearance of UI components under different color schemes directly in SwiftUI previews.
     */
    @ViewBuilder
-   public var body: some View {
+   internal var body: some View {
       ZStack {
          Rectangle() // A rectangle to fill the background
             .fill(Color.secondaryBackground) // Fills the rectangle with a secondary background color

@@ -5,7 +5,19 @@ import SwiftUI
 extension SecTextContainer {
    /**
     * Defines the textField view.
-    * - Description: This view represents a secure text field where user input is obscured. It uses the SecText view, which supports a placeholder when the text is empty and uses an AttributedString to allow for rich text presentation. The view is bound to the isSecured state variable, which determines whether the text should be displayed as plain text or obscured, and the str state variable, which represents the content of the text field.
+    * - Description: This view represents a secure 
+    *               text field where user input is 
+    *               obscured. It uses the SecText 
+    *               view, which supports a placeholder 
+    *               when the text is empty and uses an 
+    *               AttributedString to allow for rich 
+    *               text presentation. The view is 
+    *               bound to the isSecured state 
+    *               variable, which determines whether 
+    *               the text should be displayed as 
+    *               plain text or obscured, and the 
+    *               str state variable, which represents 
+    *               the content of the text field.
     */
    internal var textField: some View {
       SecText( // Initializes a SecText view
@@ -16,7 +28,18 @@ extension SecTextContainer {
    }
    /**
     * Defines the button view.
-    * - Description: This view represents a button that toggles the visibility of the text in the secure text field. When the button is clicked, the 'isSecured' state variable is toggled, which in turn updates the display of the text field. The button's label is an image that changes based on the 'isSecured' state - an 'eye' icon when the text is obscured, and an 'eye.slash' icon when the text is visible.
+    * - Description: This view represents a button 
+    *               that toggles the visibility of the 
+    *               text in the secure text field. 
+    *               When the button is clicked, the 
+    *               'isSecured' state variable is 
+    *               toggled, which in turn updates the 
+    *               display of the text field. The 
+    *               button's label is an image that 
+    *               changes based on the 'isSecured' 
+    *               state - an 'eye' icon when the text 
+    *               is obscured, and an 'eye.slash' icon 
+    *               when the text is visible.
     */
    internal var button: some View {
       Button {

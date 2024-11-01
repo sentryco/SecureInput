@@ -5,9 +5,13 @@ import TextColorizer
  */
 extension SecText {
    /**
-    * - Description: This is the main body of the SecText SwiftUI view.
-    *                It listens for changes in the 'str' and 'isSecured' properties and updates the 'attrStr' property accordingly.
-    *                The text is displayed with a white or black color and a password font.
+    * - Description: This is the main body of the SecText 
+    *                SwiftUI view. It listens for changes 
+    *                in the 'str' and 'isSecured' properties 
+    *                and updates the 'attrStr' property 
+    *                accordingly. The text is displayed with 
+    *                a white or black color and a password 
+    *                font.
     * - Fixme: ⚠️️ Ideally we should not have two onChange. try to solve the same way as we do SecTextView with a modifier
     */
    internal var body: some View {
@@ -25,8 +29,15 @@ extension SecText {
    }
    /**
     * Setting str might need to be rebinded to
-    * - Description: This is a computed property that returns a SwiftUI Text view. The text displayed is the current value of the 'attrStr' property. The text color is set to either white or black with 80% opacity, and the font is set to a password style.
-    * - Note: We can probably just use Text. it's multiline and support attributedstring
+    * - Description: This is a computed property that 
+    *               returns a SwiftUI Text view. The 
+    *               text displayed is the current value 
+    *               of the 'attrStr' property. The text 
+    *               color is set to either white or 
+    *               black with 80% opacity, and the 
+    *               font is set to a password style.
+    * - Note: We can probably just use Text. it's 
+    *         multiline and support attributedstring
     * - Fixme: ⚠️️ Try to move binding into onChange or in the scope of this struct etc
     */
    fileprivate var text: some View {

@@ -2,7 +2,10 @@ import SwiftUI
 import MockGen
 /**
  * Preview (DarkMode / LightMode)
- * - Description: This preview showcases the SecureTextView component in both DarkMode and LightMode, allowing developers to visually inspect and interact with the component in different color schemes.
+ * - Description: This preview showcases the SecureTextView component in 
+ *                both DarkMode and LightMode, allowing developers to 
+ *                visually inspect and interact with the component in 
+ *                different color schemes.
  */
 #Preview(traits: .fixedLayout(width: 400, height: 300)) {
    /**

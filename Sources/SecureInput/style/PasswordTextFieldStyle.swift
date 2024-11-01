@@ -1,16 +1,22 @@
 import SwiftUI
 /**
  * Password textfield style
- * - Description: A text field style that provides a secure input field for password entry, featuring a monospaced font and custom opacity for text color to enhance readability and focus on security.
+ * - Description: A text field style that provides a secure 
+ *                input field for password entry, featuring a 
+ *                monospaced font and custom opacity for text 
+ *                color to enhance readability and focus on 
+ *                security.
  * - Note: Used in `SecureInputView` and `SecTextView`
  */
 internal struct PasswordTextFieldStyle: TextFieldStyle {
    /**
     * Body
-    * - Description: This function is responsible for styling the password text field.
+    * - Description: This function is responsible for styling 
+    *               the password text field.
     * - Parameters:
     *   - configuration: The configuration of the text field.
-    * - Returns: A view representing the body of the password text field.
+    * - Returns: A view representing the body of the password 
+    *           text field.
     */
    internal func _body(configuration: TextField<Self._Label>) -> some View {
       let passwordFont: Font = .system(size: 18, weight: .regular, design: .monospaced) // .password

@@ -6,7 +6,16 @@ import TextColorizer
  */
 extension SecText {
    /**
-    * This computed property returns an `AttributedString` based on the current state of the `SecText` view. If the text field is empty, it returns an `AttributedString of the placeholder string. If the 'isSecured' state is true, it returns an AttributedString of obscured characters. Otherwise, it returns a colorized AttributedString of the text field's content.
+    * - Description: This computed property returns an 
+    *               `AttributedString` based on the 
+    *               current state of the `SecText` view. 
+    *               If the text field is empty, it returns 
+    *               an `AttributedString of the placeholder 
+    *               string. If the 'isSecured' state is 
+    *               true, it returns an AttributedString of 
+    *               obscured characters. Otherwise, it 
+    *               returns a colorized AttributedString of 
+    *               the text field's content.
     * - Note: Binding on content, that we can rebind and do colorization on
     * - Note: Binding that handles secure or not secure
     * - Note: We can do this with rebinding as well

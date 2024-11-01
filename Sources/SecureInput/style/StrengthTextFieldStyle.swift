@@ -1,7 +1,10 @@
 import SwiftUI
 /**
  * Textfield style
- * - Description: A text field style that visually represents the strength of an input, typically used in conjunction with a strength indicator or slider.
+ * - Description: A text field style that visually represents 
+ *               the strength of an input, typically used in 
+ *               conjunction with a strength indicator or 
+ *               slider.
  * - Note: Used in StrengthSlider
  * - Fixme: ⚠️️ Maybe add some kind of restrictor? or do that else-where?
  * - Fixme: ⚠️️ Use TextView? or multiline textfield, do research, if so why?
@@ -31,8 +34,10 @@ internal struct StrengthTextFieldStyle: TextFieldStyle {
 extension TextField {
    /**
     * - Description: Applies the custom strength text field style to the text field.
-    * - Parameter color: The color to use for the strength text field style.
-    * - Returns: A modified version of the text field with the strength text field style applied.
+    * - Parameter color: The color to use for the strength 
+    *                   text field style.
+    * - Returns: A modified version of the text field with 
+    *           the strength text field style applied.
     */
    @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
    internal func strengthTextFieldStyle(color: Color) -> some View {

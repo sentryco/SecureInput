@@ -1,12 +1,17 @@
 import SwiftUI
 /**
  * Suitable for storing passwords etc (Supports multi-line)
- * - Description: Has `SecTextView` (left-aligned) and a `Button` with eye icon (right aligned)
- * - Important: ⚠️️ `secure-text-field` doesn't support axis: vertical, so we have to do it this way
- * - Remark: Not for auth / grant etc (for auth / grant we use the native secure textfield, it will reset on visibility change, but thats an acceptable drawback for more security etc)
+ * - Description: Has `SecTextView` (left-aligned) and a `Button` with 
+ *               eye icon (right aligned)
+ * - Important: ⚠️️ `secure-text-field` doesn't support axis: vertical, 
+ *             so we have to do it this way
+ * - Remark: Not for auth / grant etc (for auth / grant we use the 
+ *          native secure textfield, it will reset on visibility change, 
+ *          but thats an acceptable drawback for more security etc)
  * - Note: Used in `EditPassRow` in "EditList", `PassGenRow` in "PassGenView"
  * - Note: Has no outline around password, - Fixme: ⚠️️ elaborate?
- * - Note: here is a version in UIKIT embedded in swiftUI: https://stackoverflow.com/a/77050041/5389500
+ * - Note: here is a version in UIKIT embedded in swiftUI: 
+ *         https://stackoverflow.com/a/77050041/5389500
  * - Fixme: ⚠️️ Reset cursor position, see legacy code for how
  * - Fixme: ⚠️️ Some issues with cursor etc, we need to update input state from slider as well
  * - Fixme: ⚠️️ See legacy code for how to fix this completly. good enough for now

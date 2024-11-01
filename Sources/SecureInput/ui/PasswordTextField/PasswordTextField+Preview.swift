@@ -3,9 +3,13 @@ import HybridColor
 import MockGen
 /**
  * Preview (dark and light mode)
- * - Description: A preview for `PasswordTextField` that shows the component in both dark and light mode, allowing developers to see how it looks and behaves with dynamic content.
- *  - Fixme: ⚠️️ Make this less tall or perfect now?
- *  - Fixme: ⚠️️ dox the lines a bit
+ * - Description: A preview for `PasswordTextField` that 
+ *               shows the component in both dark and 
+ *               light mode, allowing developers to see 
+ *               how it looks and behaves with dynamic 
+ *               content.
+ * - Fixme: ⚠️️ Make this less tall or perfect now?
+ * - Fixme: ⚠️️ dox the lines a bit
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {
    struct DebugView: View {

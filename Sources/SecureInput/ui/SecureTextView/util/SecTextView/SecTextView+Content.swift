@@ -5,7 +5,12 @@ import MockGen
  */
 extension SecTextView {
    /**
-    * The main view structure of the `SecTextView` which contains a text field that can toggle between secure and non-secure modes. This view also manages the changes in the text field when the secure mode is toggled.
+    * - Description: The main view structure of the 
+    *               `SecTextView` which contains a text 
+    *               field that can toggle between secure 
+    *               and non-secure modes. This view also 
+    *               manages the changes in the text field 
+    *               when the secure mode is toggled.
     */
    internal var body: some View {
       textField
@@ -20,7 +25,12 @@ extension SecTextView {
  */
 extension SecTextView {
    /**
-    * A TextField view that allows the user to input text. The text can be toggled between visible and obscured states for secure input, such as passwords. The TextField also supports vertical alignment of text.
+    * - Description: A TextField view that allows the user 
+    *               to input text. The text can be toggled 
+    *               between visible and obscured states for 
+    *               secure input, such as passwords. The 
+    *               TextField also supports vertical alignment 
+    *               of text.
     * - Fixme: ⚠️️ use a constant for the placholder font color
     */
    @ViewBuilder

@@ -5,7 +5,13 @@ import SwiftUI
 extension SecureInputView {
    /**
     * body
-    * - Description: The main view structure of the `SecureInputView` which contains a horizontal stack of the secure and non-secure text fields along with a toggle button to switch between them. This view also manages the initial focus state when it appears.
+    * - Description: The main view structure of the 
+    *               `SecureInputView` which contains a 
+    *               horizontal stack of the secure and 
+    *               non-secure text fields along with a 
+    *               toggle button to switch between them. 
+    *               This view also manages the initial 
+    *               focus state when it appears.
     */
    public var body: some View {
       HStack {

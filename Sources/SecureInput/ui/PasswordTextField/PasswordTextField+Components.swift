@@ -5,7 +5,16 @@ import SwiftUI
 extension PasswordTextField {
    /**
     * Displays either a secure or insecure text field based on the `isPasswordVisible` state.
-    * - Description: This view component represents the password text field. It dynamically displays either a secure or an insecure text field based on the `isPasswordVisible` state. When `isPasswordVisible` is true, it displays an insecure text field, allowing the user to see the entered password. When `isPasswordVisible` is false, it displays a secure text field, obscuring the entered password for security.
+    * - Description: This view component represents the 
+    *               password text field. It dynamically 
+    *               displays either a secure or an insecure 
+    *               text field based on the `isPasswordVisible` 
+    *               state. When `isPasswordVisible` is true, it 
+    *               displays an insecure text field, allowing 
+    *               the user to see the entered password. 
+    *               When `isPasswordVisible` is false, it 
+    *               displays a secure text field, obscuring 
+    *               the entered password for security.
     * - Fixme: ⚠️️ psw overlapping icon somewhow, elaborate?
     */
    internal var passwordTextField: some View {
@@ -24,7 +33,17 @@ extension PasswordTextField {
    }
    /**
     * This view displays an icon that toggles the visibility of the password text field.
-    * - Description: The icon serves as a visual toggle for the password visibility state. When the password is visible, the icon shows an eye with a slash, indicating that tapping the icon will obscure the password. Conversely, when the password is obscured, the icon shows an open eye, suggesting that tapping it will reveal the password. This provides an intuitive way for users to control the security of their password input.
+    * - Description: The icon serves as a visual toggle 
+    *               for the password visibility state. 
+    *               When the password is visible, the icon 
+    *               shows an eye with a slash, indicating 
+    *               that tapping the icon will obscure the 
+    *               password. Conversely, when the password 
+    *               is obscured, the icon shows an open eye, 
+    *               suggesting that tapping it will reveal 
+    *               the password. This provides an intuitive 
+    *               way for users to control the security of 
+    *               their password input.
     */
    internal var iconView: some View {
       // Creates an image view with the system eye icon. If isPasswordVisible is true, the icon is filled with a slash, indicating that the password is not visible. If isPasswordVisible is false, the icon is filled with an eye, indicating that the password is visible.
@@ -41,7 +60,13 @@ extension PasswordTextField {
 extension PasswordTextField {
    /**
     * TextField
-    * - Description: A view component that creates a standard text field for password entry when the password is visible. It binds to the `text` state variable and applies the necessary platform-specific modifiers to ensure the correct keyboard behavior and appearance.
+    * - Description: A view component that creates a 
+    *               standard text field for password 
+    *               entry when the password is visible. 
+    *               It binds to the `text` state variable 
+    *               and applies the necessary platform-specific 
+    *               modifiers to ensure the correct keyboard 
+    *               behavior and appearance.
     * - Fixme: ⚠️️ Make tfview a viewmodifier and add tf style as an external tf style, maybe worth a later effort later
     */
    fileprivate var textFieldView: some View {
@@ -62,7 +87,13 @@ extension PasswordTextField {
    }
    /**
     * Displays a secure text field for password input.
-    * - Description: A view component that creates a secure text field for password entry. It obscures the text entered by the user, providing an additional layer of security. The field binds to the `text` state variable and displays the placeholder text when the field is empty.
+    * - Description: A view component that creates a 
+    *               secure text field for password entry. 
+    *               It obscures the text entered by the 
+    *               user, providing an additional layer of 
+    *               security. The field binds to the `text` 
+    *               state variable and displays the placeholder 
+    *               text when the field is empty.
     */
    fileprivate var secureTextField: some View {
       SecuredTextFieldView( // Initializes a SecuredTextFieldView

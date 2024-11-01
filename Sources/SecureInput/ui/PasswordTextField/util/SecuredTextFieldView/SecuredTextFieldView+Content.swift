@@ -5,7 +5,11 @@ import SwiftUI
 extension SecuredTextFieldView {
    /**
     * body
-    * - Description: The main body of the `SecuredTextFieldView`, which contains a `SecureField` for secure text entry. The field uses a custom style and binds to the `text` state variable for updating the entered text.
+    * - Description: The main body of the `SecuredTextFieldView`, 
+    *               which contains a `SecureField` for secure 
+    *               text entry. The field uses a custom style 
+    *               and binds to the `text` state variable for 
+    *               updating the entered text.
     */
    internal var body: some View {
       SecureField( // Initializes a SecureField for secure text entry

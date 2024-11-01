@@ -4,7 +4,13 @@ import SwiftUI
  */
 extension SecureTextView {
    /**
-    * This property represents a view component that creates a `SecTextView`. It binds the `isSecured` and `visibleInput` state variables to the `SecTextView`, allowing it to toggle between secure and non-secure text display based on user interaction. The `placeholderText` is used as a hint for the user when the input field is empty.
+    * - Description: This property represents a view component that 
+    *               creates a `SecTextView`. It binds the `isSecured` 
+    *               and `visibleInput` state variables to the 
+    *               `SecTextView`, allowing it to toggle between 
+    *               secure and non-secure text display based on user 
+    *               interaction. The `placeholderText` is used as a 
+    *               hint for the user when the input field is empty.
     * - Fixme: ⚠️️ Rename to secureTextView?
     */
    internal var textField: some View {

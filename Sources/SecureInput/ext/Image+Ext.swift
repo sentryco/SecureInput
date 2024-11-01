@@ -1,15 +1,19 @@
 import SwiftUI
 import HybridColor
 /**
- * This extension provides utility functions for handling SwiftUI Images, including applying icon styles and initializing images from optional system names.
+ * - Description: This extension provides utility functions for handling 
+ *                SwiftUI Images, including applying icon styles and 
+ *                initializing images from optional system names.
  */
 extension Image {
    /**
     * The aligned icon
-    * - Description: This function applies a style to the image, resizing it to the specified size, adding padding, and setting the color.
-    * - Fixme: ⚠️️ more advance modifier for images: https://stackoverflow.com/a/59534345/5389500
-    * - Fixme: ⚠️️ might be able to use that link for Text modifiers sa well?
-    * - Fixme: ⚠️️ make padding edge-inset?
+    * - Description: This function applies a style to the image, 
+    *                resizing it to the specified size, adding 
+    *                padding, and setting the color.
+    * - Fixme: ⚠️️ More advance modifier for images: https://stackoverflow.com/a/59534345/5389500
+    * - Fixme: ⚠️️ Might be able to use that link for Text modifiers sa well?
+    * - Fixme: ⚠️️ Make padding edge-inset?
     * - Parameters:
     *   - size: The size to resize the image to.
     *   - padding: The amount of padding to add around the image.
@@ -31,8 +35,9 @@ extension Image {
 extension Image {
    /**
     * Adds support for optionally creating an image
-    * - Description: This initializer creates an image from an optional system name, or returns nil if the system name is nil.
-    * ## Examples:
+    * - Description: This initializer creates an image from an optional 
+    *                system name, or returns nil if the system name is nil.
+    * - Example:
     * Image(optionalSystemName: leadingImageName)?
     *   .iconStyle(size: 16, padding: 0)
     * - Parameter optionalSystemName: The optional system name of the image to be initialized.
@@ -47,7 +52,15 @@ extension Image {
 }
 /**
  * Preview
- * - Description: This section provides a preview of the image with the applied icon style. The image is displayed in a fixed layout with a size of 400x400. The image used for the preview is the system image named "heart". The icon style applied to the image includes a size of 16 and no padding. The image is further modified with additional padding and a background color that is either black or white, depending on the current color scheme.
+ * - Description: This section provides a preview of the image with 
+ *                the applied icon style. The image is displayed in a 
+ *                fixed layout with a size of 400x400. The image used 
+ *                for the preview is the system image named "heart". 
+ *                The icon style applied to the image includes a size 
+ *                of 16 and no padding. The image is further modified 
+ *                with additional padding and a background color that 
+ *                is either black or white, depending on the current 
+ *                color scheme.
  * - Fixme: ⚠️️ add support for relativly sized? later?
  */
 #Preview(traits: .fixedLayout(width: 400, height: 400)) {

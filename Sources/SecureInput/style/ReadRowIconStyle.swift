@@ -2,12 +2,18 @@ import SwiftUI
 import HybridColor
 /**
  * Icon style
- * - Description: A style extension for Image views that configures icons specifically for read-row layouts in the application, ensuring visual consistency and adherence to the design language.
+ * - Description: A style extension for Image views that 
+ *               configures icons specifically for read-row 
+ *               layouts in the application, ensuring visual 
+ *               consistency and adherence to the design 
+ *               language.
  */
 extension Image {
    /**
     * Applies a predefined style to the icon used in read-row views.
-    * - Description: This style configures the icon's size, padding, and color to ensure it matches the read-row's design specifications.
+    * - Description: This style configures the icon's size, 
+    *               padding, and color to ensure it matches the 
+    *               read-row's design specifications.
     * - Fixme: ⚠️️ move param to const?
     * - Fixme: ⚠️️ add custom size via param?
     * - Fixme: ⚠️️ make this relative to a scale etc

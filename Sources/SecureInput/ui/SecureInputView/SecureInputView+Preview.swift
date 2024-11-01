@@ -1,7 +1,14 @@
 import SwiftUI
 /**
  * Preview (DarkMode / LightMode)
- * - Description: A preview for `SecureInputView` that demonstrates the component in both dark and light mode, allowing developers to see how it looks and behaves with dynamic content. It includes a text field for password input with a customizable placeholder and showcases the secure text entry feature.
+ * - Description: A preview for `SecureInputView` that 
+ *               demonstrates the component in both dark 
+ *               and light mode, allowing developers to 
+ *               see how it looks and behaves with dynamic 
+ *               content. It includes a text field for 
+ *               password input with a customizable 
+ *               placeholder and showcases the secure text 
+ *               entry feature.
  * - Fixme: ⚠️️ Add frame for testing on iPad etc
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {

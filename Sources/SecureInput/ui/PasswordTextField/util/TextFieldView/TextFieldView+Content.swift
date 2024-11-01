@@ -7,7 +7,11 @@ import MockGen
 extension TextFieldView {
    /**
     * body
-    * - Description: The body of the `TextFieldView` which contains a `TextField` for text entry. The field uses a custom style and binds to the `text` state variable for updating the entered text.
+    * - Description: The body of the `TextFieldView` which 
+    *               contains a `TextField` for text entry. 
+    *               The field uses a custom style and binds 
+    *               to the `text` state variable for updating 
+    *               the entered text.
     */
    internal var body: some View {
       TextField( // Creates a text field with a placeholder and a binding to the text state variable
