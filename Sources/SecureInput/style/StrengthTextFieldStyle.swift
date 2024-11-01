@@ -40,7 +40,7 @@ extension TextField {
     *           the strength text field style applied.
     */
    @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
-   internal func strengthTextFieldStyle(color: Color) -> some View {
+   public func strengthTextFieldStyle(color: Color) -> some View {
       let tfStyle = StrengthTextFieldStyle(color: color)
       return self.textFieldStyle(tfStyle)
    }
