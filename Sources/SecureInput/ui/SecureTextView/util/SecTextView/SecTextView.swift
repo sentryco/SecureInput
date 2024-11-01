@@ -17,7 +17,7 @@ import MockGen
  * - Fixme: ⚠️️ Rename to `SecTextField`? if not occupied by something else?
  * - Note: This component is used in `PassRowView` in `ReadList` and `PassGenRow` that is used in "PassGenView".
  */
-internal struct SecTextView: View {
+public struct SecTextView: View {
    /**
     * The input value
     * - Description: The current value of the text field 
@@ -80,7 +80,7 @@ internal struct SecTextView: View {
     *   - placeholderText: A placeholder text, if there is no content
     *   - isDisabled: Needed to make popover work for macOS
     */
-   internal init(isSecured: Binding<Bool>, visibleInput: Binding<String>, placeholderText: String = "Password", isDisabled: Bool = false) {
+   public init(isSecured: Binding<Bool>, visibleInput: Binding<String>, placeholderText: String = "Password", isDisabled: Bool = false) {
       self.inputValue = visibleInput.wrappedValue
       self._isSecured = isSecured
       // - Fixme: ⚠️️ Bind hidden or shown bellow somehow
