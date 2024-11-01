@@ -14,17 +14,17 @@ public struct SecTextContainer: View {
     * State variable for the isSecured state.
     * - Description: A boolean value that determines whether the text should be displayed as plain text or obscured as a password.
     */
-   @State var isSecured: Bool
+   @State internal var isSecured: Bool
    /**
     * Binding to the str state variable.
     * - Description: A string value that represents the content of the text field. This can be plain text or obscured text based on the `isSecured` state.
     */
-   @Binding public var str: String
+   @Binding internal var str: String
    /**
     * Placeholder string to display when the str is empty.
     * - Description: A string that is displayed when the text field is empty, providing a hint to the user about what information is expected to be entered.
     */
-   public let placeholderText: String
+   internal let placeholderText: String
    /**
     * Initializes the SecTextContainer struct with the given bindings and placeholder string.
     * - Description: This initializer sets up the SecTextContainer view with the necessary bindings and placeholder string. The `isSecured` state determines whether the text should be displayed as plain text or obscured. The `str` binding represents the content of the text field. The `placeholderText` is displayed when the text field is empty, providing a hint to the user about what information is expected to be entered.

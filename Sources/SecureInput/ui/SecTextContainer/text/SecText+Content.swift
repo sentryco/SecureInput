@@ -10,7 +10,7 @@ extension SecText {
     *                The text is displayed with a white or black color and a password font.
     * - Fixme: ⚠️️ Ideally we should not have two onChange. try to solve the same way as we do SecTextView with a modifier
     */
-   public var body: some View {
+   internal var body: some View {
       text
          .onChange(of: str) { _, _ in
             // This closure is triggered when the 'str' property changes. 

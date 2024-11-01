@@ -4,7 +4,7 @@ import SwiftUI
  * - Description: A text field style that provides a secure input field for password entry, featuring a monospaced font and custom opacity for text color to enhance readability and focus on security.
  * - Note: Used in `SecureInputView` and `SecTextView`
  */
-public struct PasswordTextFieldStyle: TextFieldStyle {
+internal struct PasswordTextFieldStyle: TextFieldStyle {
    /**
     * Body
     * - Description: This function is responsible for styling the password text field.
@@ -12,9 +12,9 @@ public struct PasswordTextFieldStyle: TextFieldStyle {
     *   - configuration: The configuration of the text field.
     * - Returns: A view representing the body of the password text field.
     */
-   public func _body(configuration: TextField<Self._Label>) -> some View {
+   internal func _body(configuration: TextField<Self._Label>) -> some View {
       let passwordFont: Font = .system(size: 18, weight: .regular, design: .monospaced) // .password
-      configuration
+      return configuration
          #if os(macOS)
          .textFieldStyle(.plain) // ⚠️️ Removes the default macOS styling from a TextField, this will remove all styling, including padding and background color. You may need to add additional modifiers to achieve the desired look.
          #endif
@@ -33,7 +33,7 @@ extension View { // We use view as we have to support SecureTextField and TextFi
    /**
     * Style
     */
-   public var passwordTextFieldStyle: some View {
+   internal var passwordTextFieldStyle: some View {
       let tfStyle = PasswordTextFieldStyle()
       return self.textFieldStyle(tfStyle)
    }

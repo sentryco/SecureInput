@@ -12,7 +12,7 @@ extension View {
     * - Parameter id: The identifier to assign to the view.
     * - Returns: The view with the applied padding.
     */
-   public func accessID(_ id: String) -> some View {
+   internal func accessID(_ id: String) -> some View {
       self
          .accessibilityElement(children: .contain) // Enable accessID on container
          .accessibilityIdentifier(id) // Set the accessibility identifier of the view

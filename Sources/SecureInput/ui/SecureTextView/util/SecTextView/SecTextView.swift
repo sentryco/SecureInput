@@ -12,7 +12,7 @@ import MockGen
  * - Fixme: ⚠️️ Rename to `SecTextField`? if not occupied by something else?
  * - Note: This component is used in `PassRowView` in `ReadList` and `PassGenRow` that is used in "PassGenView".
  */
-public struct SecTextView: View {
+internal struct SecTextView: View {
    /**
     * The input value
     * - Description: The current value of the text field which the user can edit. This value is displayed in either concealed or visible form based on the `isSecured` state.
@@ -27,12 +27,12 @@ public struct SecTextView: View {
     * The visible input
     * - Description: A string that reflects the current visible state of the password. When `isSecured` is false, this string is updated with the password input by the user, allowing it to be visible for verification purposes.
     */
-   @Binding public var visibleInput: String
+   @Binding internal var visibleInput: String
    /**
     * The placeholder text
     * - Description: A string that is displayed when there is no text entered in the text field. It provides a hint to the user about what type of information is expected to be entered.
     */
-   public let placeholderText: String
+   internal let placeholderText: String
    /**
     * The isDisabled state
     * - Description: Indicates whether the view is interactive or not. When true, user input is ignored and the view appears in a disabled state.
@@ -46,7 +46,7 @@ public struct SecTextView: View {
     *   - placeholderText: A placeholder text, if there is no content
     *   - isDisabled: Needed to make popover work for macOS
     */
-   public init(isSecured: Binding<Bool>, visibleInput: Binding<String>, placeholderText: String = "Password", isDisabled: Bool = false) {
+   internal init(isSecured: Binding<Bool>, visibleInput: Binding<String>, placeholderText: String = "Password", isDisabled: Bool = false) {
       self.inputValue = visibleInput.wrappedValue
       self._isSecured = isSecured
       // - Fixme: ⚠️️ Bind hidden or shown bellow somehow

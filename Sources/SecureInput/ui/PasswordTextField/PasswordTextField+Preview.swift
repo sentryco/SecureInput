@@ -6,7 +6,6 @@ import MockGen
  * - Description: A preview for `PasswordTextField` that shows the component in both dark and light mode, allowing developers to see how it looks and behaves with dynamic content.
  *  - Fixme: ⚠️️ Make this less tall or perfect now?
  *  - Fixme: ⚠️️ dox the lines a bit
- *  - Fixme: ⚠️️ add dark background in the preview
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {
    struct DebugView: View {
@@ -25,4 +24,5 @@ import MockGen
    return PreviewContainer {
       DebugView()
    }
+   .environment(\.colorScheme, .dark) // adds dark background in the preview
 }

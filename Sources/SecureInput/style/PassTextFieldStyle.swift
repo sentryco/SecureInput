@@ -4,11 +4,11 @@ import SwiftUI
  * - Description: A text field style that provides a secure input field with a custom appearance, typically used for password or sensitive data entry. It features a rounded border and subtle shading to indicate interactivity while maintaining a sleek and minimalistic design.
  * - Note: Used in `secure-text-field-view` and `text-field-view`
  */
-public struct PassTextFieldStyle: TextFieldStyle {
+internal struct PassTextFieldStyle: TextFieldStyle {
    /**
     * - Description: Constructs the visual representation of the text field, applying custom styling and layout modifications.
     */
-   public func _body(configuration: TextField<Self._Label>) -> some View {
+   internal func _body(configuration: TextField<Self._Label>) -> some View {
       configuration
          #if os(macOS)
          .textFieldStyle(.plain) // ⚠️️ Remove the default macOS styling from a TextField, this will remove all styling, including padding and background color. You may need to add additional modifiers to achieve the desired look.
@@ -30,7 +30,7 @@ extension View {
    /**
     * Style
     */
-   public var passTextFieldStyle: some View {
+   internal var passTextFieldStyle: some View {
       let tfStyle = PassTextFieldStyle()
       return self.textFieldStyle(tfStyle)
    }

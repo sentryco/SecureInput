@@ -22,27 +22,27 @@ public struct SecureInputView: View {
     * Placeholder string to display when the text is empty.
     * - Description: This string is shown in the text field when there is no user input. It provides a hint to the user about what type of information is expected in the field.
     */
-   public let placeholder: String
+   internal let placeholder: String
    /**
     * Binding to the text state variable.
     * - Description: This binding allows the SecureInputView to read and write the text state variable, enabling two-way data binding between the view and the underlying data model.
     */
-   @Binding public var text: String
+   @Binding internal var text: String
    /**
     * State variable for the isSecure state.
     * - Description: Indicates whether the text field is in secure text entry mode, which obscures the text input.
     */
-   @State var isSecure: Bool = true
+   @State internal var isSecure: Bool = true
    /**
     * Focus state for the isSecure state.
     * - Description: This is a focus state variable that is used to manage the focus of the secured text field. When the 'isSecure' state is true, this focus state is activated, allowing the user to interact with the secured text field.
     */
-   @FocusState var focus1: Bool
+   @FocusState internal var focus1: Bool
    /**
     * Focus state for the isSecure state.
     * - Description: This is a focus state variable that is used to manage the focus of the unsecured text field. When the 'isSecure' state is false, this focus state is activated, allowing the user to interact with the unsecured text field.
     */
-   @FocusState var focus2: Bool
+   @FocusState internal var focus2: Bool
    /**
     * Initializes the SecureInputView with a placeholder, text binding, and isSecure state.
     * - Description: This initializer creates an instance of SecureInputView. It takes a placeholder string, a binding to a text state variable, and an optional boolean to set the initial state of the secure input field. The placeholder is displayed when the input field is empty. The text binding allows the SecureInputView to read and write the text state variable. The isSecure boolean determines whether the input field should initially obscure the text (true) or display it as plain text (false).

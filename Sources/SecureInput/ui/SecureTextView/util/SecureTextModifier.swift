@@ -59,7 +59,7 @@ extension View {
     *   - inputValue: The actual input value sent to the remote listener.
     * - Returns: The modified view with the SecureTextModifier applied.
     */
-   public func secureTextModifier(visibleInput: Binding<String>, isSecured: Binding<Bool>, inputValue: Binding<String>) -> some View {
+   internal func secureTextModifier(visibleInput: Binding<String>, isSecured: Binding<Bool>, inputValue: Binding<String>) -> some View {
       let modifier = SecureTextModifier(
          visibleInput: visibleInput, // Binding to the visible input string
          isSecured: isSecured, // Binding to the isSecured boolean

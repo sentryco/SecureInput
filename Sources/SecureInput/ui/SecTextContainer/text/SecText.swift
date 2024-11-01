@@ -23,7 +23,7 @@ import TextColorizer
  * - Fixme: ⚠️️ Using observedobject could actually be the best solution here if it reacts on multiple values so isVisible and str change. try it!
  * - Fixme: ⚠️️ Potentially only use this for the passgenview 👈
  */
-public struct SecText: View {
+internal struct SecText: View {
    /**
     * Binding to the isSecured state variable.
     * - Description: A boolean value that determines whether the text should be displayed as plain text or obscured as a password.
@@ -34,7 +34,7 @@ public struct SecText: View {
     * - Description: A string value that represents the content of the text field. 
     *                This can be plain text or obscured text based on the `isSecured` state.
     */
-   @Binding public var str: String
+   @Binding internal var str: String
    /**
     * State variable for the attributed string.
     * - Description: A state variable that holds an AttributedString version of the `str` binding. 

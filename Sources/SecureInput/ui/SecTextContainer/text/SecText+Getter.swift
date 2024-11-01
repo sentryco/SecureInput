@@ -12,7 +12,7 @@ extension SecText {
     * - Note: We can do this with rebinding as well
     * - Fixme: ⚠️️ Move the colors into const values?
     */
-   var attributedString: AttributedString {
+   internal var attributedString: AttributedString {
       guard !$str.wrappedValue.isEmpty else { return AttributedString(placeholderStr) } // show placeholder if no content
       if $isSecured.wrappedValue {
          return AttributedString($str.wrappedValue.map { _ in Character("●") })
@@ -62,24 +62,3 @@ extension SecText {
       }
    }
 }
-// - Fixme: ⚠️️ remove the bellow?
-//let colors: AttributedString.Colors = Color.colorScheme3 // (Color.palePurple, Color.hazyMint2, Color.suntanOrange2)/*2*/ // subdued colors. pale-purple, hazy-mint, suntan-orange
-//      self._attrStr = .init( // We rebind here
-//         get: {
-//            guard !str.wrappedValue.isEmpty else { return AttributedString(placeholderStr) } // show placeholder if no content
-//            if isSecured.wrappedValue {
-//               return AttributedString(str.wrappedValue.map { _ in Character("●") })
-//            } else {
-//               return .attributedString(text: str.wrappedValue, colors: Color.colorScheme3) // var attributedString = AttributedString(String(text), attributes: .init([.foregroundColor: Color.red]))
-//            }
-//         },
-//         set: { _ in
-//            _ = {}()
-//         }
-//      )
-
-//         .secureTextModifier(
-//            visibleInput: $visibleInput,
-//            isSecured: $isSecured,
-//            inputValue: $inputValue
-//         )

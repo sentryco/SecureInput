@@ -13,7 +13,7 @@ extension Image {
     * - Fixme: ⚠️️ make this relative to a scale etc
     * - Fixme: ⚠️️ use Metric.iconSize
     */
-   public var readRowIconStyle: some View {
+   internal var readRowIconStyle: some View {
       // there is also: Palette.Detail.icon
       let color: Color = { // Palette.Main.SearchBar.icon // .whiteOrBlack.opacity(0.6)
          .init(

@@ -6,15 +6,15 @@ import SwiftUI
  * - Note: Used in `SecuredTextFieldView` and `PasswordTextField`
  * - Fixme: ⚠️️ Add a subtle background color to the background as well?, do it later etc
  */
-public struct SecuredTextFieldView: View {
+internal struct SecuredTextFieldView: View {
    /**
     * placeholder
     * - Description: The placeholder text that is displayed within the text field when it is empty, providing a hint to the user about the expected input.
     */
-   public var hint: String
+   internal var hint: String
    /**
     * input text
     * - Description: A binding to the string value that represents the secure input entered by the user. This value is updated as the user types into the secured text field.
     */
-   @Binding public var text: String
+   @Binding internal var text: String
 }
