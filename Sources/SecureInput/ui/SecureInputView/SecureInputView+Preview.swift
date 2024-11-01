@@ -10,7 +10,7 @@ import SwiftUI
       var body: some View {
          PreviewContainer {
             SecureInputView(placeholder: "Enter password", text: $text)
-               .padding(Measure.margin)
+               .padding(16) // Measure.margin
                .background(Color.blackOrWhite)
                .onChange(of: text) { _, new in
                   Swift.print("new:  \(new)")

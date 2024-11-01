@@ -80,7 +80,7 @@ extension PasswordTextField {
       Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill") // ⚠️️ we cant use constlib here for sfsym etc
          // .padding(.vertical, 14)
          // .padding(.horizontal, 8)
-         .padding(.init(_leading: 12))
+         .padding(.leading, 12) // .init(_leading: 12)
          .onTapGesture { // Adds a tap gesture to the image
             // Swift.print("on icon tap \(isPasswordVisible)")
             isPasswordVisible.toggle() // Toggles the isPasswordVisible state variable

@@ -12,7 +12,7 @@ extension SecureInputView {
          textFieldsStack // Displays the stack of text fields for secure and insecure input
          toggleButton // Button to toggle between secure and insecure input modes
       }
-      .accessID(InterfaceID.pwsHStack)
+      .accessID("pwsHStack") // InterfaceID.pwsHStack
       // - Fixme: ⚠️️ Make isSecure a binding, so we can set this from outside etc
       .onAppear { // Set init focus on appear
          DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) { // Seems like this is the official way (adding a dispatcher): https://www.kodeco.com/31569019-focus-management-in-swiftui-getting-started
@@ -35,7 +35,7 @@ extension SecureInputView {
          secureTextField
          textField
       }
-      .accessID(InterfaceID.pwsZStack)
+      .accessID("pwsZStack") // InterfaceID.pwsZStack
    }
    /**
     * Secure textfield
@@ -47,7 +47,8 @@ extension SecureInputView {
       let placeholderText = Text(placeholder) // Placeholder text with foreground color
          .foregroundStyle(Color(light: .gray, dark: .gray).opacity(0.8)) // Set foreground color
       return SecureField("stf", text: $text, prompt: placeholderText) // Secure text field with placeholder text
-         .accessIdentifier(InterfaceID.securePasswordTextField) // Set accessibility identifier
+      // InterfaceID.securePasswordTextField
+         .accessibilityIdentifier("securePasswordTextField") // Set accessibility identifier
          .passwordTextFieldStyle // Apply password text field style
          .textContentType(.init(rawValue: "")) // Set text content type
          .opacity(isSecure ? 1 : 0) // Set opacity based on isSecure state
@@ -66,7 +67,8 @@ extension SecureInputView {
          text: $text,  // Binding to the text state variable
          prompt: Text(placeholder).foregroundStyle(Color(light: .gray, dark: .gray).opacity(0.8)) // Set prompt text with foreground color
       )
-      .accessIdentifier(InterfaceID.passwordTextField) // Set accessibility identifier
+      // InterfaceID.passwordTextField
+      .accessibilityIdentifier("passwordTextField") // Set accessibility identifier
       .passwordTextFieldStyle // Apply password text field style
       .textContentType(.init(rawValue: "")) // Set text content type
       .focused($focus2) // Set focus based on isSecure state
@@ -90,6 +92,7 @@ extension SecureInputView {
       #if os(macOS)
       .buttonStyle(.plain) // Resets default macOS button styling for macOS
       #endif
-      .accessIdentifier(InterfaceID.passwordToggleButton) // Sets accessibility identifier for the button
+      // InterfaceID.passwordToggleButton
+      .accessibilityIdentifier("passwordToggleButton") // Sets accessibility identifier for the button
    }
 }
