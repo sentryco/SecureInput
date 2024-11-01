@@ -9,7 +9,7 @@ import SwiftUI
  *               reveal the text for verification purposes.
  * - Note: Used in `PasswordView`
  */
-internal struct PasswordTextField: View {
+public struct PasswordTextField: View {
    /**
     * A binding to a boolean indicating if the password is visible.
     * - Description: A state variable that determines 
