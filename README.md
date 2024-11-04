@@ -1,4 +1,5 @@
 [![Tests](https://github.com/sentryco/SecureInput/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/SecureInput/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/2a87ea47-ffe8-4147-abdd-1d12a1fda9c5)](https://codebeat.co/projects/github-com-sentryco-secureinput-main)
 
 # SecureInput
 
