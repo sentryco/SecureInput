@@ -10,12 +10,12 @@ let package = Package(
     products: [
         .library(
             name: "SecureInput",
-            targets: ["SecureInput"]),
+            targets: ["SecureInput"])
     ],
     dependencies: [
       .package(url: "https://github.com/sentryco/HybridColor", branch: "main"),
       .package(url: "https://github.com/sentryco/MockGen", branch: "main"),
-      .package(url: "https://github.com/sentryco/TextColorizer", branch: "main"),
+      .package(url: "https://github.com/sentryco/TextColorizer", branch: "main")
     ],
     targets: [
       .target(
@@ -23,7 +23,7 @@ let package = Package(
          dependencies: [
             .product(name: "HybridColor", package: "HybridColor"),
             .product(name: "MockGen", package: "MockGen"),
-            .product(name: "TextColorizer", package: "TextColorizer"),
+            .product(name: "TextColorizer", package: "TextColorizer")
          ]),
       .testTarget(
          name: "SecureInputTests",

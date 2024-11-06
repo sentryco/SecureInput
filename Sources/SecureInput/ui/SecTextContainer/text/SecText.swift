@@ -80,7 +80,7 @@ internal struct SecText: View {
     *   - str: Binding to the str state variable.
     *   - placeholderStr: Placeholder string to display when the str is empty.
     */
-   public init(isSecured: Binding<Bool>, str: Binding<String>, placeholderStr: String) {
+   init(isSecured: Binding<Bool>, str: Binding<String>, placeholderStr: String) {
       self._isSecured = isSecured
       self._str = str
       // Setting str might need to be rebinded to

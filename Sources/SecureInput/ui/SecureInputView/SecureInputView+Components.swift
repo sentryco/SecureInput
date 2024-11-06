@@ -69,7 +69,7 @@ extension SecureInputView {
          .textContentType(.init(rawValue: "")) // Set text content type
          .opacity(isSecure ? 1 : 0) // Set opacity based on isSecure state
          .focused($focus1) // Set focus based on isSecure state
-      
+
    }
    /**
     * Textfield
