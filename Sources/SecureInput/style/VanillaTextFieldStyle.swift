@@ -8,7 +8,7 @@ import SwiftUI
  *               text input experience.
  * - Note: Alternate name: `CleanTextField`
  */
-internal struct VanillaTextFieldStyle: TextFieldStyle {
+fileprivate struct VanillaTextFieldStyle: TextFieldStyle {
    /**
     * - Description: Applies the vanilla text field style to 
     *               the text field.
@@ -22,7 +22,7 @@ internal struct VanillaTextFieldStyle: TextFieldStyle {
     * - Returns: A modified version of the text field with 
     *           the vanilla text field style applied.
     */
-   internal func _body(configuration: TextField<Self._Label>) -> some View {
+   fileprivate func _body(configuration: TextField<Self._Label>) -> some View {
       configuration
          #if os(iOS)
          .keyboardType(.asciiCapable)  // Sets the keyboard type to ASCII capable, suitable for most common text input

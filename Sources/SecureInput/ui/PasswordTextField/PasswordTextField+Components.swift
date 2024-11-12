@@ -57,6 +57,9 @@ extension PasswordTextField {
          }
    }
 }
+/**
+ * Private
+ */
 extension PasswordTextField {
    /**
     * TextField

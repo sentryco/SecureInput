@@ -18,9 +18,9 @@ extension Image {
     * - Fixme: ⚠️️ add custom size via param?
     * - Fixme: ⚠️️ make this relative to a scale etc
     * - Fixme: ⚠️️ use Metric.iconSize
+    * - Fixme: ⚠️️ there is also: Palette.Detail.icon
     */
    internal var readRowIconStyle: some View {
-      // there is also: Palette.Detail.icon
       let color: Color = { // Palette.Main.SearchBar.icon // .whiteOrBlack.opacity(0.6)
          .init(
             light: Color(hex: 0x222222) // The background color for light mode

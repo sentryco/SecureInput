@@ -9,13 +9,13 @@ import SwiftUI
  *                sleek and minimalistic design.
  * - Note: Used in `secure-text-field-view` and `text-field-view`
  */
-internal struct PassTextFieldStyle: TextFieldStyle {
+fileprivate struct PassTextFieldStyle: TextFieldStyle {
    /**
     * - Description: Constructs the visual representation of 
     *               the text field, applying custom styling 
     *               and layout modifications.
     */
-   internal func _body(configuration: TextField<Self._Label>) -> some View {
+   fileprivate func _body(configuration: TextField<Self._Label>) -> some View {
       configuration
          #if os(macOS)
          .textFieldStyle(.plain) // ⚠️️ Remove the default macOS styling from a TextField, this will remove all styling, including padding and background color. You may need to add additional modifiers to achieve the desired look.

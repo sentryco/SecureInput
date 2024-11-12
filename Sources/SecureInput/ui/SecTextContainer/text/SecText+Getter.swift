@@ -20,6 +20,7 @@ extension SecText {
     * - Note: Binding that handles secure or not secure
     * - Note: We can do this with rebinding as well
     * - Fixme: ⚠️️ Move the colors into const values?
+    * - Fixme: ⚠️️ is there a better obfuscation char? check legacy?
     */
    internal var attributedString: AttributedString {
       guard !$str.wrappedValue.isEmpty else { return AttributedString(placeholderStr) } // show placeholder if no content

@@ -9,7 +9,7 @@ import MockGen
  *               how it looks and behaves with dynamic 
  *               content.
  * - Fixme: ⚠️️ Make this less tall or perfect now?
- * - Fixme: ⚠️️ dox the lines a bit
+ * - Fixme: ⚠️️ DoC the lines a bit
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {
    struct DebugView: View {

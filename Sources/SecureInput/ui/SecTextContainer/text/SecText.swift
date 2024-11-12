@@ -36,7 +36,7 @@ internal struct SecText: View {
     *               whether the text should be displayed 
     *               as plain text or obscured as a password.
     */
-   @Binding var isSecured: Bool
+   @Binding internal var isSecured: Bool
    /**
     * The current value of the text that will be displayed in the view.
     * - Description: A string value that represents the content 
@@ -53,7 +53,7 @@ internal struct SecText: View {
     *               formatting and styling to be applied 
     *               to the text content.
     */
-   @State var attrStr: AttributedString = .init()
+   @State internal var attrStr: AttributedString = .init()
    /**
     * Placeholder string to display when the str is empty.
     * - Description: A string that is displayed when 
@@ -61,7 +61,7 @@ internal struct SecText: View {
     *               a hint to the user about what 
     *               information is expected to be entered.
     */
-   let placeholderStr: String
+   internal let placeholderStr: String
    /**
     * Initializes the SecText struct with the given bindings and placeholder string.
     * - Description: This initializer sets up the SecText view 
@@ -80,7 +80,7 @@ internal struct SecText: View {
     *   - str: Binding to the str state variable.
     *   - placeholderStr: Placeholder string to display when the str is empty.
     */
-   init(isSecured: Binding<Bool>, str: Binding<String>, placeholderStr: String) {
+   internal init(isSecured: Binding<Bool>, str: Binding<String>, placeholderStr: String) {
       self._isSecured = isSecured
       self._str = str
       // Setting str might need to be rebinded to

@@ -26,7 +26,7 @@ public struct SecTextView: View {
     *               visible form based on the `isSecured` 
     *               state.
     */
-   @State var inputValue: String
+   @State internal var inputValue: String
    /**
     * The isSecured state
     * - Description: A boolean state that determines 
@@ -37,7 +37,7 @@ public struct SecTextView: View {
     *               a secure way to enter sensitive 
     *               information such as passwords.
     */
-   @Binding var isSecured: Bool
+   @Binding internal var isSecured: Bool
    /**
     * The visible input
     * - Description: A string that reflects the current 
@@ -64,7 +64,7 @@ public struct SecTextView: View {
     *               user input is ignored and the view 
     *               appears in a disabled state.
     */
-   let isDisabled: Bool
+   internal let isDisabled: Bool
    /**
     * - Description: This initializer creates an instance of SecTextView. 
     *                It takes a binding to a boolean that determines 

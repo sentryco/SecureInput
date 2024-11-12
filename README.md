@@ -40,6 +40,12 @@ Add this to XCode or SPM:
 .package(url: "https://github.com/sentryco/SecureInput", branch: "main")
 ```
 
+## Dependencies:
+- [HybridColor](https://github.com/sentryco/HybridColor)
+- [MockGen](https://github.com/sentryco/MockGen)
+- [TextColorizer](https://github.com/sentryco/TextColorizer)
+
 ## Todo
 
 - Add Attributed TextField that is editable
+- Only use the MockGen dep for the testing scope?

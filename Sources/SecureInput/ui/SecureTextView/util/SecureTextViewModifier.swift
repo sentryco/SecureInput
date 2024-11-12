@@ -8,7 +8,7 @@ import SwiftUI
  * - Note: Used in `SecTextView`
  * - Note: There is preview for this in: `SecTextView`
  */
-struct SecureTextModifier: ViewModifier {
+fileprivate struct SecureTextViewModifier: ViewModifier {
    /**
     * Binding to the visible input string
     * - Description: This is a binding to the visible input string. It 
@@ -17,7 +17,7 @@ struct SecureTextModifier: ViewModifier {
     *                consist of placeholder characters (like '●') instead 
     *                of the actual input.
     */
-   @Binding var visibleInput: String
+   @Binding fileprivate var visibleInput: String
    /**
     * Binding to the isSecured boolean
     * - Description: This is a binding to a boolean that determines 
@@ -26,7 +26,7 @@ struct SecureTextModifier: ViewModifier {
     *                hide the actual characters, providing a secure way to 
     *                enter sensitive information such as passwords.
     */
-   @Binding var isSecured: Bool
+   @Binding fileprivate var isSecured: Bool
    /**
     * Binding to the inputValue string
     * - Description: This is a binding to the internal string that 
@@ -35,7 +35,7 @@ struct SecureTextModifier: ViewModifier {
     *                of whether the text is currently obscured (secured) 
     *                or visible.
     */
-   @Binding var inputValue: String
+   @Binding fileprivate var inputValue: String
    /**
     * Body
     * - Description: This function modifies the provided content view by 
@@ -58,7 +58,7 @@ struct SecureTextModifier: ViewModifier {
     * - Parameter content: The view to which the SecureTextModifier is applied.
     * - Returns: The modified view with the SecureTextModifier applied.
     */
-   func body(content: Content) -> some View {
+   fileprivate func body(content: Content) -> some View {
       content
          .onChange(of: visibleInput) { (_, newValue: String) in // Listens for changes to the visibleInput and captures the new value
             guard isSecured else { inputValue = newValue; return }  // Check if input is secured, if not, update inputValue and exit
@@ -88,7 +88,7 @@ extension View {
     * - Returns: The modified view with the SecureTextModifier applied.
     */
    internal func secureTextModifier(visibleInput: Binding<String>, isSecured: Binding<Bool>, inputValue: Binding<String>) -> some View {
-      let modifier = SecureTextModifier(
+      let modifier = SecureTextViewModifier(
          visibleInput: visibleInput, // Binding to the visible input string
          isSecured: isSecured, // Binding to the isSecured boolean
          inputValue: inputValue // Binding to the inputValue string

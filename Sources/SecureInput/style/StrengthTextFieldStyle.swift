@@ -9,16 +9,16 @@ import SwiftUI
  * - Fixme: ⚠️️ Maybe add some kind of restrictor? or do that else-where?
  * - Fixme: ⚠️️ Use TextView? or multiline textfield, do research, if so why?
  */
-internal struct StrengthTextFieldStyle: TextFieldStyle {
+fileprivate struct StrengthTextFieldStyle: TextFieldStyle {
    /**
     * - Description: The color to use for the strength text field style.
     */
-   internal let color: Color
+   fileprivate let color: Color
    /**
     * - Description: The body of the strength text field style.
     * - Fixme: ⚠️️ fixedSize makes it dynamic try that
     */
-   internal func _body(configuration: TextField<Self._Label>) -> some View {
+   fileprivate func _body(configuration: TextField<Self._Label>) -> some View {
       configuration
          #if os(macOS)
          .textFieldStyle(.plain) // ⚠️️ Remove the default macOS styling from a TextField, this will remove all styling, including padding and background color. You may need to add additional modifiers to achieve the desired look.
