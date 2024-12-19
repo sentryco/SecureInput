@@ -14,7 +14,7 @@ fileprivate struct OutlineViewModifier: ViewModifier {
    }
 }
 extension View {
-   public var outlineViewModifier: some View {
+   internal var outlineViewModifier: some View {
       let modifier = OutlineViewModifier()
       return self.modifier(modifier)
    }
