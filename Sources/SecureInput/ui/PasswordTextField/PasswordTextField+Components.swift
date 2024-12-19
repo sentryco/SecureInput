@@ -83,7 +83,8 @@ extension PasswordTextField {
          text: $text // Passes a binding to the text state variable to the TextFieldView
          // isTextChanged: isTextChanged
       )
-      // - Fixme: ⚠️️ move the bellow into a viewmodifer or style etc?
+      .disabled(!isEditable)
+      // - Fixme: ⚠️️⚠️️ move the bellow into a viewmodifer or style etc?
       #if os(macOS)
       .textFieldStyle(.plain) // ⚠️️ Remove the default macOS styling from a TextField, this will remove all styling, including padding and background color. You may need to add additional modifiers to achieve the desired look.
       #endif

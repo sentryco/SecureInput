@@ -40,6 +40,10 @@ public struct PasswordTextField: View {
     */
    @Binding internal var text: String
    /**
+    * - Fixme: ⚠️️ Add doc
+    */
+   let isEditable: Bool
+   /**
     * A closure that restricts the input text. The default implementation allows all text.
     * - Note: This property is intended to be overridden to implement custom text restrictions.
     * - Fixme: ⚠️️ Store default restrict in a static let 👈 (it doesnt have to be a var tied to the instance etc)
@@ -65,11 +69,13 @@ public struct PasswordTextField: View {
     *   - hint: The placeholder text for the text field.
     *   - text: A binding to the text in the text field.
     *   - restrict: A closure that restricts the input text, defaulting to no restriction.
+    *   - isEditable: - Fixme: ⚠️️ add doc
     */
-   public init(isPasswordVisible: Binding<Bool>, hint: String, text: Binding<String>, restrict: @escaping Restrict = { (_ text: String) in text }) {
+   public init(isPasswordVisible: Binding<Bool>, hint: String, text: Binding<String>, isEditable: Bool = true, restrict: @escaping Restrict = { (_ text: String) in text }) {
       self._isPasswordVisible = isPasswordVisible
       self.hint = hint
       self._text = text
+      self.isEditable = isEditable
       self.restrict = restrict
    }
 }
