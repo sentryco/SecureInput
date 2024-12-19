@@ -20,14 +20,6 @@ fileprivate struct PassTextFieldStyle: TextFieldStyle {
          #if os(macOS)
          .textFieldStyle(.plain) // ⚠️️ Remove the default macOS styling from a TextField, this will remove all styling, including padding and background color. You may need to add additional modifiers to achieve the desired look.
          #endif
-         .padding(12) // ⚠️️ was 20, but seemed too tall // Measure.defaultMargin
-         .overlay( // Applies an overlay view to the text field
-            RoundedRectangle(cornerRadius: 8) // Creates a rounded rectangle with a corner radius of 8
-            .strokeBorder( // Strokes the border of the rounded rectangle
-               Color.whiteOrBlack.opacity(0.3), // Sets the color of the border to a semi-transparent white or black, depending on the environment
-               style: StrokeStyle(lineWidth: 1.0) // Defines the style of the border, including its width
-            )
-         )
    }
 }
 /**

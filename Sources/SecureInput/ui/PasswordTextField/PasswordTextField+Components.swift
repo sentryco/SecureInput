@@ -4,6 +4,19 @@ import SwiftUI
  */
 extension PasswordTextField {
    /**
+    * - Fixme: ⚠️️ add doc
+    */
+   var stack: some View {
+      HStack(spacing: .zero) { // Initializes a horizontal stack with no spacing between elements.
+         passwordTextField // passwordTextField: Displays either a secure or insecure text field based on isPasswordVisible state
+         // .background(Color.orange) // debug
+         iconView // Displays the icon for the password field
+         // .background(Color.green) // debug
+      }
+      .padding(12) // ⚠️️ was 20, but seemed too tall // Measure.defaultMargin
+      .outlineViewModifier
+   }
+   /**
     * Displays either a secure or insecure text field based on the `isPasswordVisible` state.
     * - Description: This view component represents the 
     *               password text field. It dynamically 
@@ -17,18 +30,13 @@ extension PasswordTextField {
     *               the entered password for security.
     * - Fixme: ⚠️️ psw overlapping icon somewhow, elaborate?
     */
-   internal var passwordTextField: some View {
-      Group {
-         if isPasswordVisible { // We can't use or operator here, we can but then we must use AnyView, so not worth it
-            // Displays the insecure text field when isPasswordVisible is true
-            textFieldView
-         } else {
-            // Displays the secure text field when isPasswordVisible is false
-            secureTextField
-         }
-      }.onChange(of: text) { (_ old: String, _ new: String) in
-         // Applies the restrict function to the new text and updates the text state variable
-         text = restrict(new)
+   @ViewBuilder internal var passwordTextField: some View {
+      if isPasswordVisible { // ⚠️️ We can't use or operator here, we can but then we must use AnyView, so not worth it
+         // Displays the insecure text field when isPasswordVisible is true
+         textFieldView
+      } else {
+         // Displays the secure text field when isPasswordVisible is false
+         secureTextField
       }
    }
    /**
@@ -48,11 +56,8 @@ extension PasswordTextField {
    internal var iconView: some View {
       // Creates an image view with the system eye icon. If isPasswordVisible is true, the icon is filled with a slash, indicating that the password is not visible. If isPasswordVisible is false, the icon is filled with an eye, indicating that the password is visible.
       Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill") // ⚠️️ we cant use constlib here for sfsym etc
-      // .padding(.vertical, 14)
-      // .padding(.horizontal, 8)
-         .padding(.leading, 12) // .init(_leading: 12)
+         .padding(.leading, 12) // - Fixme: ⚠️️ doc this line
          .onTapGesture { // Adds a tap gesture to the image
-            // Swift.print("on icon tap \(isPasswordVisible)")
             isPasswordVisible.toggle() // Toggles the isPasswordVisible state variable
          }
    }

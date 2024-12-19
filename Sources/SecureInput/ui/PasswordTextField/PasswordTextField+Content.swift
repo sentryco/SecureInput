@@ -16,11 +16,10 @@ extension PasswordTextField {
     *               for the password field.
     */
    public var body: some View {
-      HStack(spacing: .zero) { // Initializes a horizontal stack with no spacing between elements.
-         passwordTextField // passwordTextField: Displays either a secure or insecure text field based on isPasswordVisible state
-         // .background(Color.orange) // debug
-         iconView // Displays the icon for the password field
-         // .background(Color.green) // debug
-      }
+      stack
+         .onChange(of: text) { (_ old: String, _ new: String) in
+            // Applies the restrict function to the new text and updates the text state variable
+            text = restrict(new)
+         }
    }
 }
