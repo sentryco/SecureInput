@@ -40,7 +40,10 @@ public struct PasswordTextField: View {
     */
    @Binding internal var text: String
    /**
-    * - Fixme: ⚠️️ Add doc
+    * A boolean indicating if the text field is editable.
+    * - Description: This property determines whether the user can modify the text in the text field.
+    *                When set to `true`, the text field is editable; when set to `false`, it is not.
+    *                The default value is `true`.
     */
    let isEditable: Bool
    /**
@@ -69,7 +72,7 @@ public struct PasswordTextField: View {
     *   - hint: The placeholder text for the text field.
     *   - text: A binding to the text in the text field.
     *   - restrict: A closure that restricts the input text, defaulting to no restriction.
-    *   - isEditable: - Fixme: ⚠️️ add doc
+    *   - isEditable: A boolean indicating if the text field is editable.
     */
    public init(isPasswordVisible: Binding<Bool>, hint: String, text: Binding<String>, isEditable: Bool = true, restrict: @escaping Restrict = { (_ text: String) in text }) {
       self._isPasswordVisible = isPasswordVisible

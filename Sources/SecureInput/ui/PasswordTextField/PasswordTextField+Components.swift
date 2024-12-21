@@ -4,7 +4,8 @@ import SwiftUI
  */
 extension PasswordTextField {
    /**
-    * - Fixme: ⚠️️ add doc
+    * The main view of the password text field.
+    * - Description: This view contains a horizontal stack with the password text field and an icon for toggling password visibility.
     */
    var stack: some View {
       HStack(spacing: .zero) { // Initializes a horizontal stack with no spacing between elements.
