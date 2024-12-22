@@ -57,7 +57,7 @@ extension PasswordTextField {
    internal var iconView: some View {
       // Creates an image view with the system eye icon. If isPasswordVisible is true, the icon is filled with a slash, indicating that the password is not visible. If isPasswordVisible is false, the icon is filled with an eye, indicating that the password is visible.
       Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill") // ⚠️️ we cant use constlib here for sfsym etc
-         .padding(.leading, 12) // - Fixme: ⚠️️ doc this line
+         .padding(.leading, 12) // Adds horizontal spacing between the password text field and the visibility toggle icon
          .onTapGesture { // Adds a tap gesture to the image
             isPasswordVisible.toggle() // Toggles the isPasswordVisible state variable
          }

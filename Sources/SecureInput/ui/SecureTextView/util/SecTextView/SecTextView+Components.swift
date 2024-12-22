@@ -27,7 +27,6 @@ extension SecTextView {
             inputValue: $inputValue // Binding to the inputValue state variable
          )
          .passwordTextFieldStyle // Adds the look and feel
-      // InterfaceID.passwordTextField
          .accessibilityIdentifier("passwordTextField") // Adds ui-testing capabilities
       #if os(macOS)
       // Check if the text field is disabled

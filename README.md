@@ -40,6 +40,9 @@ Add this to XCode or SPM:
 .package(url: "https://github.com/sentryco/SecureInput", branch: "main")
 ```
 
+## Gotchas:
+- Add your own style to components by making new TextFieldStyles and apply them to the view struct components. This way the new style overrides the internal TextFieldStyles
+
 ## Dependencies:
 - [HybridColor](https://github.com/sentryco/HybridColor)
 - [MockGen](https://github.com/sentryco/MockGen)
