@@ -82,4 +82,3 @@ public struct PasswordTextField: View {
       self.restrict = restrict
    }
 }
-// var isTextChanged: (Bool) -> Void

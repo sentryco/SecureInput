@@ -1,7 +1,8 @@
 import SwiftUI
 /**
  * Suitable for storing passwords etc (Supports multi-line)
- * - Description: Has `SecTextView` (left-aligned) and a `Button` with 
+ * - Fixme: ⚠️️ Add abstract
+ * - Description: Has `SecTextView` (left-aligned) and a `Button` with
  *               eye icon (right aligned)
  * - Important: ⚠️️ `secure-text-field` doesn't support axis: vertical, 
  *             so we have to do it this way
@@ -26,7 +27,7 @@ public struct SecureTextView: View {
     */
    @State internal var isSecured: Bool
    /**
-    * - Description: One source of truth
+    * One source of truth
     * - Description: This is a binding to the visible input string. It represents the text that is currently visible in the text field. If the text is secured, this string will consist of placeholder characters (like '●') instead of the actual input.
     */
    @Binding internal var visibleInput: String

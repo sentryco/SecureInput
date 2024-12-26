@@ -3,10 +3,11 @@ import HybridColor
 /**
  * Icon style
  * - Description: A style extension for Image views that 
- *               configures icons specifically for read-row 
- *               layouts in the application, ensuring visual 
- *               consistency and adherence to the design 
- *               language.
+ *                configures icons specifically for read-row
+ *                layouts in the application, ensuring visual
+ *                consistency and adherence to the design
+ *                language.
+ * - Fixme: ⚠️️ rename this style?
  */
 extension Image {
    /**
@@ -14,11 +15,11 @@ extension Image {
     * - Description: This style configures the icon's size, 
     *               padding, and color to ensure it matches the 
     *               read-row's design specifications.
-    * - Fixme: ⚠️️ move param to const?
-    * - Fixme: ⚠️️ add custom size via param?
-    * - Fixme: ⚠️️ make this relative to a scale etc
-    * - Fixme: ⚠️️ use Metric.iconSize
-    * - Fixme: ⚠️️ there is also: Palette.Detail.icon
+    * - Fixme: ⚠️️ Move param to const?
+    * - Fixme: ⚠️️ Add custom size via param?
+    * - Fixme: ⚠️️ Make this relative to a scale etc
+    * - Fixme: ⚠️️ Use Metric.iconSize
+    * - Fixme: ⚠️️ There is also: Palette.Detail.icon
     */
    internal var readRowIconStyle: some View {
       let color: Color = { // Palette.Main.SearchBar.icon // .whiteOrBlack.opacity(0.6)

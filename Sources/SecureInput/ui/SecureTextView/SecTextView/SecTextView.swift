@@ -83,7 +83,7 @@ public struct SecTextView: View {
    public init(isSecured: Binding<Bool>, visibleInput: Binding<String>, placeholderText: String = "Password", isDisabled: Bool = false) {
       self.inputValue = visibleInput.wrappedValue
       self._isSecured = isSecured
-      // - Fixme: ⚠️️ Bind hidden or shown bellow somehow
+      // - Fixme: ⚠️️ Bind hidden or shown bellow somehow?
       self._visibleInput = visibleInput
       self.placeholderText = placeholderText
       self.isDisabled = isDisabled

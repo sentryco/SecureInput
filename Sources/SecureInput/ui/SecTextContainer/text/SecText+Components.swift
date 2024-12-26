@@ -14,11 +14,10 @@ extension SecText {
     * - Note: We can probably just use Text. it's
     *         multiline and support attributedstring
     * - Fixme: ⚠️️ Try to move binding into onChange or in the scope of this struct etc
+    * - Fixme: ⚠️️ move font to a TextFieldstyle etc? 👈
     */
    internal var text: some View {
-      let passwordFont: Font = .system(size: 18, weight: .regular, design: .monospaced) // .password
       return Text($attrStr.wrappedValue)
-         .foregroundColor(Color.whiteOrBlack.opacity(0.8))
-         .font(passwordFont)
+         .secTextStyle
    }
 }

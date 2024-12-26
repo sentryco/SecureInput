@@ -15,7 +15,7 @@ extension SecTextView {
    public var body: some View {
       textField
          .onChange(of: isSecured) { _, _ in // Callback for when text changes
-            // set scrambled text or real value (keep this as a oneliner, makes the entire method use less vertical space etc)
+            // Set scrambled text or real value (keep this as a one-liner, makes the entire method use less vertical space etc)
             visibleInput = isSecured ? String(inputValue.map { _ in Character("●") }) : inputValue
          }
    }

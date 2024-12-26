@@ -49,6 +49,8 @@ Add this to XCode or SPM:
 - [TextColorizer](https://github.com/sentryco/TextColorizer)
 
 ## Todo
-
 - Add Attributed TextField that is editable
 - Only use the MockGen dep for the testing scope?
+- Make more high-level styling. use ViewBuilder + style struct with param drilling etc. Or use environment variable etc
+- Remove MockGen as dep. Use private rand methods, use copilot etc
+- Add debug flag. `public var isSecureInputDebug: Bool = false`

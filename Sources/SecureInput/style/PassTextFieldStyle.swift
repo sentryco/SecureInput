@@ -30,12 +30,13 @@ extension View {
     * Style
     */
    internal var passTextFieldStyle: some View {
-      let tfStyle = PassTextFieldStyle()
+      let tfStyle: PassTextFieldStyle = .init()
       return self.textFieldStyle(tfStyle)
    }
 }
 /**
  * Preview
+ * - Fixme: ⚠️️ use random word. use copilot to create code
  */
 #Preview(traits: .fixedLayout(width: 340, height: 200)) {
    PreviewContainer {

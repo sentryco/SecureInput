@@ -23,7 +23,7 @@ extension SecureTextView {
    /**
     * Create `Toggle-icon-button` (Right side eye icon)
     * - Fixme: ⚠️️ Could we use a button style here? see other similar code etc,
-    * - Fixme: ⚠️️ make a button style: `.toggleButton(img1: "", img2: "")` see similar code or use, try to see similar buttonstyle code elese where and replecate that
+    * - Fixme: ⚠️️ Make a button style: `.toggleButton(img1: "", img2: "")` see similar code or use, try to see similar buttonstyle code elese where and replecate that
     * - Fixme: ⚠️️ Get icon names from const etc 👈
     */
    internal var button: some View {

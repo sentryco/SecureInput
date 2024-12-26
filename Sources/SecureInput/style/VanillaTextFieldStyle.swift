@@ -39,7 +39,7 @@ extension View {
     * Style
     */
    internal var vanillaTextFieldStyle: some View {
-      let tfStyle = VanillaTextFieldStyle()
+      let tfStyle: VanillaTextFieldStyle = .init()
       return self.textFieldStyle(tfStyle)
    }
 }
@@ -62,5 +62,5 @@ extension View {
          #endif
    }
    .environment(\.colorScheme, .dark)
-//      .frame(width: 200, height: 100)
+   // .frame(width: 200, height: 100)
 }

@@ -1,7 +1,8 @@
 import SwiftUI
 /**
  * Great for single-line-password-fields
- * - Description: A SwiftUI view for secure single-line password fields, 
+ * - Fixme: ⚠️️ add abstract
+ * - Description: A SwiftUI view for secure single-line password fields,
  *               suitable for authentication and grant purposes. It does 
  *               not work with vertical axis text fields and may clear 
  *               text when toggling from unsecured to secure mode. This 

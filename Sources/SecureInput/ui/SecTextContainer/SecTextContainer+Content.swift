@@ -14,6 +14,7 @@ extension SecTextContainer {
     *               textField is a secure text field 
     *               that hides the input, and the button 
     *               toggles the visibility of the text.
+    * - Fixme: ⚠️️ move spacing to a const somewhere
     */
    public var body: some View {
       HStack(spacing: 4) { // Horizontal alignment

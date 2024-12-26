@@ -12,7 +12,7 @@ import TextColorizer
  */
 #Preview(traits: .fixedLayout(width: 400, height: 300)) {
    struct ContentView: View {
-      @State var str = String.randomPassword(pwdLength: Int.random(in: 24...148)) // ?? "xyz123" // SecRan.randomSecret(/*min: 24, max: 128*/)
+      @State var str: String = String.randomPassword(pwdLength: Int.random(in: 24...148)) // ?? "xyz123" // SecRan.randomSecret(/*min: 24, max: 128*/)
       var body: some View {
          PreviewContainer {
             SecTextContainer(isSecured: false, str: $str, placeholderText: "Password")

@@ -12,13 +12,15 @@ extension SecTextView {
     *               TextField also supports vertical alignment
     *               of text.
     * - Fixme: ⚠️️ use a constant for the placholder font color
+    * - Fixme: ⚠️️ move accessID to const?
     */
    @ViewBuilder
    internal var textField: some View {
+      let placeholderText = Text(placeholderText).foregroundStyle(Color.gray)
       let tf: some View = TextField( // This line initializes a TextField view component.
          "secure-text-input", // Just accessibility, not important, not related to ui testing
          text: $visibleInput, // Binding to the visibleInput state variable
-         prompt: Text(placeholderText).foregroundStyle(Color.gray), // When there is no content
+         prompt: placeholderText, // When there is no content
          axis: .vertical // Sets the axis of the text field to vertical
       )
          .secureTextModifier(

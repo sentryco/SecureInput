@@ -1,7 +1,13 @@
 import SwiftUI
 import MockGen
-
+/**
+ * - Fixme: ⚠️️ add doc
+ * - Fixme: ⚠️️ add preview?
+ */
 fileprivate struct OutlineViewModifier: ViewModifier {
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
    fileprivate func body(content: Content) -> some View {
       content
          .overlay( // Applies an overlay view to the text field
@@ -13,7 +19,13 @@ fileprivate struct OutlineViewModifier: ViewModifier {
          )
    }
 }
+/**
+ * - Fixme: ⚠️️ add doc
+ */
 extension View {
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
    internal var outlineViewModifier: some View {
       let modifier = OutlineViewModifier()
       return self.modifier(modifier)

@@ -2,10 +2,11 @@ import SwiftUI
 /**
  * Textfield style
  * - Description: A text field style that visually represents 
- *               the strength of an input, typically used in 
- *               conjunction with a strength indicator or 
- *               slider.
+ *                the strength of an input, typically used in
+ *                conjunction with a strength indicator or
+ *                slider.
  * - Note: Used in StrengthSlider
+ * - Fixme: ⚠️️ Add abstract
  * - Fixme: ⚠️️ Maybe add some kind of restrictor? or do that else-where?
  * - Fixme: ⚠️️ Use TextView? or multiline textfield, do research, if so why?
  */

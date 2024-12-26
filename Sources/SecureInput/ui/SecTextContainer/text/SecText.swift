@@ -8,6 +8,7 @@ import TextColorizer
  *                placeholder when the text is empty and 
  *                uses an `AttributedString` to allow for 
  *                rich text presentation.
+ * - Fixme: ⚠️️ add abstract
  * - Note: TextEditor doesn't support AttributedString
  * - Note: Using UITextView to get attributed string working: https://stackoverflow.com/a/77044684/5389500
  * - Note: great on attributedstring https://fatbobman.com/en/posts/attributedstring/

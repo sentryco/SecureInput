@@ -8,6 +8,7 @@ import SwiftUI
  *               displayed when the field is empty.
  * - Note: Is truncated - Fixme: ⚠️️ elaborate?
  * - Note: Used in `SecuredTextFieldView` and `PasswordTextField`
+ * - Fixme: ⚠️️ add abstract
  * - Fixme: ⚠️️ Add a subtle background color to the background as well?, do it later etc
  */
 internal struct SecuredTextFieldView: View {

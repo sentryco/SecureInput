@@ -9,14 +9,18 @@ import MockGen
  *               how it looks and behaves with dynamic 
  *               content.
  * - Fixme: ⚠️️ Make this less tall or perfect now?
- * - Fixme: ⚠️️ DoC the lines a bit
+ * - Fixme: ⚠️️ Doc the lines a bit
  */
 #Preview(traits: .fixedLayout(width: 400, height: 240)) {
    struct DebugView: View {
       @State var isPasswordVisible: Bool = false
       @State var password = String.randomPassword(pwdLength: Int.random(in: 2...48)) // ?? "xyz123"
       var body: some View {
-         PasswordTextField(isPasswordVisible: $isPasswordVisible, hint: "Password goes here", text: $password)
+         PasswordTextField(
+            isPasswordVisible: $isPasswordVisible,
+            hint: "Password goes here",
+            text: $password
+         )
             .padding()
             .background(Color.blackOrWhite)
             #if os(macOS)

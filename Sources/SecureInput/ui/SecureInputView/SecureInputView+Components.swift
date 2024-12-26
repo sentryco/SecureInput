@@ -8,6 +8,7 @@ extension SecureInputView {
     * - Description: A ZStack that layers two text fields, 
     *               one secure and one not, which can be 
     *               toggled to show or hide the password.
+    * - Fixme: ⚠️️ move accessID to some const etc
     */
    internal var textFieldsStack: some View {
       ZStack {
@@ -27,8 +28,9 @@ extension SecureInputView {
     *               'eye.slash' icon, indicating that 
     *               clicking it will obscure the password.
     * - Note: alt icons: "lock.fill" : "lock.open"
-    * - Fixme: ⚠️️ use consts for the icons
-    * - Fixme: ⚠️️ should we use an iconImageModifier here? see other similar code in the code-base?
+    * - Fixme: ⚠️️ Use consts for the icons
+    * - Fixme: ⚠️️ move accessID to some const etc
+    * - Fixme: ⚠️️ Should we use an iconImageModifier here? see other similar code in the code-base?
     */
    internal var toggleButton: some View {
       Button {
@@ -58,6 +60,7 @@ extension SecureInputView {
     *               cue to the user that the input is secure.
     * - Note: The prompt is the placeholder text
     * - Note: sometimes  .textContentType(.password) prompts autofill for some reason
+    * - Fixme: ⚠️️ move accessID to some const etc
     */
    fileprivate var secureTextField: some View {
       let placeholderText = Text(placeholder) // Placeholder text with foreground color
@@ -81,12 +84,18 @@ extension SecureInputView {
     *               the user that the input is not obscured.
     * - Note: the prompt is the placeholder text
     * - Note: ⚠️️ sometimes  .textContentType(.password) prompts autofill for some reason
+    * - Fixme: ⚠️️ move accessID to some const etc
     */
    fileprivate var textField: some View {
-      TextField(
+      let placeholderText: Text = {
+         let color = Color(light: .gray, dark: .gray).opacity(0.8)
+         return .init(placeholder)
+            .foregroundStyle(color)
+      }()
+      return TextField(
          "test-text-field",  // Placeholder text
          text: $text,  // Binding to the text state variable
-         prompt: Text(placeholder).foregroundStyle(Color(light: .gray, dark: .gray).opacity(0.8)) // Set prompt text with foreground color
+         prompt: placeholderText // Set prompt text with foreground color
       )
       // InterfaceID.passwordTextField
       .accessibilityIdentifier("passwordTextField") // Set accessibility identifier

@@ -46,11 +46,12 @@ extension View { // We use view as we have to support SecureTextField and TextFi
 }
 /**
  * Preview
- * - Fixme: ⚠️️ use @state, add code to a debugcontainer
+ * - Fixme: ⚠️️ use random word. use copilot to create code
  */
 #Preview(traits: .fixedLayout(width: 340, height: 300))  {
+   @Previewable @State var text: String = "Hello world"
    PreviewContainer {
-      TextField("test-text-field", text: .constant("Hello world"))
+      TextField("test-text-field", text: $text)
          .passwordTextFieldStyle
          .padding()
          .background(Color.blackOrWhite)

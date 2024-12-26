@@ -6,6 +6,7 @@ extension PasswordTextField {
    /**
     * The main view of the password text field.
     * - Description: This view contains a horizontal stack with the password text field and an icon for toggling password visibility.
+    * - Fixme: ⚠️️ move padding into init or a style etc
     */
    var stack: some View {
       HStack(spacing: .zero) { // Initializes a horizontal stack with no spacing between elements.
@@ -30,6 +31,7 @@ extension PasswordTextField {
     *               displays a secure text field, obscuring 
     *               the entered password for security.
     * - Fixme: ⚠️️ psw overlapping icon somewhow, elaborate?
+    * - Fixme: ⚠️️ move padding into init or a style etc
     */
    @ViewBuilder internal var passwordTextField: some View {
       if isPasswordVisible { // ⚠️️ We can't use or operator here, we can but then we must use AnyView, so not worth it
@@ -53,6 +55,7 @@ extension PasswordTextField {
     *               the password. This provides an intuitive 
     *               way for users to control the security of 
     *               their password input.
+    * - Fixme: ⚠️️ move padding into init or a style etc
     */
    internal var iconView: some View {
       // Creates an image view with the system eye icon. If isPasswordVisible is true, the icon is filled with a slash, indicating that the password is not visible. If isPasswordVisible is false, the icon is filled with an eye, indicating that the password is visible.
