@@ -1,12 +1,13 @@
 import SwiftUI
 import MockGen
 /**
- * - Fixme: ⚠️️ add doc
+ * - Description: This file defines a view modifier that applies an outline style to SwiftUI views.
  * - Fixme: ⚠️️ add preview?
  */
 fileprivate struct OutlineViewModifier: ViewModifier {
    /**
-    * - Fixme: ⚠️️ add doc
+    * Applies the outline style to a view.
+    * - Description: This method is used to modify the view by adding an outline with a rounded rectangle border.
     */
    fileprivate func body(content: Content) -> some View {
       content
@@ -20,11 +21,12 @@ fileprivate struct OutlineViewModifier: ViewModifier {
    }
 }
 /**
- * - Fixme: ⚠️️ add doc
+ * Provides a view modifier that applies an outline style to the view.
  */
 extension View {
    /**
-    * - Fixme: ⚠️️ add doc
+    * Provides a view modifier that applies an outline style to the view.
+    * - Returns: A modified view with an outline border.
     */
    internal var outlineViewModifier: some View {
       let modifier = OutlineViewModifier()
